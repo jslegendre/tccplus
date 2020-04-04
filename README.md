@@ -49,3 +49,21 @@ Services:
  - Ubiquity 
  - Willow
  ```
+Usage Example:
+get application CFBundleIdentifier:
+`grep 'BundleIdent' -A 1 /Applications/<APPLICATION NAME>/Contents/Info.plist`
+
+use CFBundleIdentifier with tccplus application:
+`<PATH TO TCCPLUS>/tccplus add Microphone <CFBundleIdentifier>`
+
+
+```bash
+user@iMac ~ % grep 'BundleIdent' -A 1 /Applications/Discord.app/Contents/Info.plist
+    <key>CFBundleIdentifier</key>
+    <string>com.hnc.Discord</string>
+user@iMacc ~ % grep 'BundleIdent' -A 1 /Applications/zoom.us.app/Contents/Info.plist
+    <key>CFBundleIdentifier</key>
+    <string>us.zoom.xos</string>
+user@iMac ~ % ./tccplus add Microphone com.hnc.Discord
+Successfully added Microphone approval status for com.hnc.Discord
+```
