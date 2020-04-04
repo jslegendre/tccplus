@@ -50,13 +50,11 @@ Services:
  - Willow
  ```
 Usage Example:
-get application CFBundleIdentifier:
+Get application bundle ID:
+
 `grep 'BundleIdent' -A 1 /Applications/<APPLICATION NAME>/Contents/Info.plist`
 
-use CFBundleIdentifier with tccplus application:
-`<PATH TO TCCPLUS>/tccplus add Microphone <CFBundleIdentifier>`
-
-
+Pass result to `tccplus`
 ```bash
 user@iMac ~ % grep 'BundleIdent' -A 1 /Applications/Discord.app/Contents/Info.plist
     <key>CFBundleIdentifier</key>
